@@ -3,9 +3,9 @@ num_first_only = (1, 5, 6, 7, 8, 9, 15, 16, 19)
 input2 = input.split()
 ans = {}
 for index,tmp in enumerate(input2):
-    if index in num_first_only:
+    if index in num_first_only:
         ans[input2[index][0:1]] = index
     else:
         ans[input2[index][0:2]] = index
 
-print(ans) 
+print(ans) 
