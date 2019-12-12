@@ -16,7 +16,7 @@ with open('col1.txt', mode='w') as col1_file, \
         col2_file.write(col2[tmp]+'\n')
 
 
-# '\'を用いると行を跨いでかけるよ
+# '\'を用いると行を跨いでかけるよ
 
 #fname = 'hightemp.txt'
 # with open(fname) as data_file, \
