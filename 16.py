@@ -1,7 +1,16 @@
 import math
+import sys
 
 fname = 'hightemp.txt'
-n = int(input('N--> '))
+args = sys.argv
+#これやったら「長さがたりない」って出るで
+# if args[1] is None :
+#     print("ないよ")
+
+if len(sys.argv) >= 2:
+    n = int(args[1])
+else :
+    n = int(input('N--> '))
 
 with open(fname) as data_file:
     lines = data_file.readlines()

@@ -26,7 +26,7 @@ split -l $unit  hightemp.txt child_test_
 #生成ファイルの数に対するループの数
 loop=0
 #系列を生成する場合，{a..z}でもいけるよ.もしくは "$seq"でも可能
-#https://qiita.com/laikuaut/items/642aa329a8d214a2cccb
+#　https://qiita.com/laikuaut/items/642aa329a8d214a2cccb
 for i in {a..z}
 do
     if test $loop -eq $n 
@@ -42,13 +42,22 @@ do
     (( loop++ ))
 done
 
+#python版実行
+python 16.py $n
 
 # 検証
 
 for i in `seq 1 $n`
 do
     fname=`printf child_%02d.txt $i`
-    fname_test=`printf child_test_%02d.txt $i`
+    fname_test=`printf child_test_%02d.txt $i`
     diff --report-identical-files $fname $fname_test
+    
+    
 done
 
+#ファイル削除
+#"{}"はブレース展開というらしいが，どうやら変数をそのまま使うことはできない
+#なので "eval" を使うらしい
+eval rm child_0{1..$n}.txt
+eval rm child_test_0{1..$n}.txt
