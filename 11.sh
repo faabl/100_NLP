@@ -2,4 +2,4 @@
 
 #tr '\t' ' ' < hightemp.txt 
 
-expand  -t 1 hightemp.txt
+expand  -t 1 hightemp.txt

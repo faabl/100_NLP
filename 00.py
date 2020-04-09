@@ -5,6 +5,6 @@ for i in range(len(text)):
 
 print(ans)
 
-# [start:stop:step]
+# [start:stop:step]
 ans2 = text[::-1]
 print(ans2)

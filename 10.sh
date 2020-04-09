@@ -1,1 +1,1 @@
-wc -l hightemp.txt
+wc -l hightemp.txt

@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 
 file_name="hightemp.txt"
 ans =0

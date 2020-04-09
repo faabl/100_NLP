@@ -2,17 +2,10 @@
 # どうやら日本語を認識しないらしい
 
 
-def n_gram(target, n):
-    result = []
-
-    for index, tmp in enumerate(target):
-        if(index == len(target)-n+1):
-            break
+def n_gram(target,n):
+    result=[]
+    for index in range(len(target)-n+1): #3の場合の時のbi-gramは[0,1]の二つ
         result.append(target[index:index+n])
-
-    # for i in range(0, len(target) - n + 1):
-    #     result.append(target[i:i + n])
-
     return result
 
 
@@ -28,9 +21,9 @@ input1 = "paraparaparadise"
 input2 = "paragraph"
 
 bi_1 = set(n_gram(input1, 2))
-bi_2 = set(n_gram(input2, 2))
-
 print('X : ' + str(bi_1))
+
+bi_2 = set(n_gram(input2, 2))
 print('Y : ' + str(bi_2))
 
 print((bi_1 or bi_2))
